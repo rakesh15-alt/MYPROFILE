@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rakesh Mahato | Portfolio</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background:linear-gradient(-45deg,#0f0c29,#302b63,#24243e,#1b1b2f);
+  background-size:400% 400%;
+  animation:gradientBG 18s ease infinite;
+  color:white;
+  padding:20px;
+  overflow-x:hidden;
+}
+
+@keyframes gradientBG{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* ===== BLUR ===== */
+.site-content{
+  filter:blur(8px);
+  transition:filter 1s ease;
+}
+.site-content.clear{
+  filter:blur(0);
+}
+
+/* ===== INTRO BASE ===== */
+.intro{
+  position:fixed;
+  top:-130%;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:#050505;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  transform:rotate(-6deg);
+  animation:introDrop 1.3s ease forwards;
+  box-shadow:0 0 60px #00ffff;
+}
+
+@keyframes introDrop{
+  to{top:0}
+}
+
+.intro.exit{
+  animation:introExit 1.2s ease forwards;
+}
+
+@keyframes introExit{
+  to{
+    top:-150%;
+    transform:rotate(6deg);
+  }
+}
+
+.intro h1{
+  font-size:3.2rem;
+  color:#00ffff;
+  text-shadow:0 0 20px #00ffff;
+  margin-bottom:30px;
+  text-align:center;
+}
+
+/* ===== BUTTONS ===== */
+.intro .buttons{
+  display:flex;
+  gap:25px;
+}
+
+.intro button{
+  padding:14px 35px;
+  font-size:1.1rem;
+  font-weight:bold;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  background:#00ffff;
+  color:#000;
+  box-shadow:0 0 20px #00ffff;
+  transition:transform .3s, box-shadow .3s;
+}
+
+.intro button:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 35px #ff69b4;
+}
+
+/* ===== SECOND POPUP ===== */
+#noPopup{
+  display:none;
+}
+
+/* ===== CONTENT ===== */
+a{color:#00ffff;text-decoration:none}
+a:hover{color:#ff69b4;text-shadow:0 0 10px #ff69b4}
+
+.note{
+  position:absolute;
+  top:15px;
+  right:15px;
+  background:rgba(255,20,147,.1);
+  color:#ff69b4;
+  padding:12px;
+  border:1px dashed #ff69b4;
+  border-radius:10px;
+  box-shadow:0 0 15px #ff69b4;
+}
+
+header{text-align:center;padding:30px 0}
+
+.profile-pic-placeholder{
+  width:220px;
+  height:220px;
+  border:4px dashed #00ffff;
+  margin:0 auto 15px;
+}
+
+h1{text-shadow:0 0 10px #00ffff}
+.nickname{color:#00ffff
+padding: 16px;
+  font-size: 12px;
+}
+
+
+section{
+  margin:40px auto;
+  max-width:800px;
+  padding:25px;
+  background:rgba(255,255,255,.05);
+  border-radius:15px;
+  box-shadow:0 0 20px rgba(0,255,255,.1);
+}
+
+h2{
+  border-bottom:2px solid #00ffff;
+  margin-bottom:15px;
+  padding-bottom:8px;
+  color:#00ffff;
+}
+
+footer{
+  text-align:center;
+  margin-top:40px;
+  color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<!-- FIRST POPUP -->
+<div class="intro" id="intro">
+  <h1>ARE YOU SURE?</h1>
+  <div class="buttons">
+    <button onclick="yesClick()">YES</button>
+    <button onclick="noClick()">NO</button>
+  </div>
+</div>
+
+<!-- SECOND POPUP -->
+<div class="intro" id="noPopup">
+  <h1>THEN WHY DID U COME HERE?<br>STUPID</h1>
+  <button onclick="leaveSite()">LEAVE</button>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="site-content" id="siteContent">
+
+  <div class="note">
+    Skill & experience matter — not a degree.
+  </div>
+
+  <header>
+    <div class="profile-pic-placeholder">
+      <img src="profilepic.jpg" style="width:100%;height:100%">
+    </div>
+    <h1>Rakesh Mahato <span class="nickname">(WIZZYY)</span></h1>
+    <p>| Web Developer | Editor |</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>Hello! I'm <strong>Rakesh Mahato</strong>, also known as <strong>WIZZYY</strong>.</p>
+    <p>I craft interactive and visually engaging websites using modern technologies.</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>Web Development</li>
+      <li>Editing</li>
+    </ul>
+  </section>
+
+<section>
+    <h2>My Work & Repositories</h2>
+    <ul>
+      <li><a href="projects.html">PROJECTS</a></li>
+      
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <LI><a href="mailto:usrrakex@gmail.com" class="btn">GMAIL</a></LI>
+    <li><a href="https://github.com/rakesh15-alt">GitHub Profile</a></li>
+  </section>
+
+<footer> &copy; 2025 Rakesh Mahato . All rights reserved. Help:9395747078 </footer>
+
+</div>
+
+<script>
+function yesClick(){
+  document.getElementById("intro").classList.add("exit");
+  document.getElementById("siteContent").classList.add("clear");
+}
+
+function noClick(){
+  document.getElementById("intro").classList.add("exit");
+  setTimeout(()=>{
+    const popup = document.getElementById("noPopup");
+    popup.style.display = "flex";
+    popup.style.top = "-130%";
+    popup.style.animation = "introDrop 1.2s ease forwards";
+  },600);
+}
+
+function leaveSite(){
+  document.getElementById("noPopup").classList.add("exit");
+
+  // Try to close tab
+  window.open('', '_self');
+  window.close();
+
+  // Fallback if blocked
+  setTimeout(()=>{
+    if (!window.closed) {
+      if (history.length > 1) {
+        history.back();
+      } else {
+        document.body.innerHTML = "";
+        document.body.style.background = "#000";
+      }
+    }
+  },400);
+}
+</script>
+
+</body>
+</html>
