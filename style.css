@@ -1,0 +1,184 @@
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background:linear-gradient(-45deg,#0f0c29,#302b63,#24243e,#1b1b2f);
+  background-size:400% 400%;
+  animation:gradientBG 18s ease infinite;
+  color:white;
+  padding:20px;
+  overflow-x:hidden;
+}
+
+@keyframes gradientBG{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* ===== BLUR ===== */
+.site-content{
+  filter:blur(8px);
+  transition:filter 1s ease;
+}
+.site-content.clear{
+  filter:blur(0);
+}
+
+/* ===== INTRO BASE ===== */
+.intro{
+  position:fixed;
+  top:-130%;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:#050505;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  transform:rotate(-6deg);
+  animation:introDrop 1.3s ease forwards;
+  box-shadow:0 0 60px #00ffff;
+}
+
+@keyframes introDrop{
+  to{top:0}
+}
+
+.intro.exit{
+  animation:introExit 1.2s ease forwards;
+}
+
+@keyframes introExit{
+  to{
+    top:-150%;
+    transform:rotate(6deg);
+  }
+}
+
+.intro h1{
+  font-size:3.2rem;
+  color:#00ffff;
+  text-shadow:0 0 20px #00ffff;
+  margin-bottom:30px;
+  text-align:center;
+}
+
+/* ===== BUTTONS ===== */
+.intro .buttons{
+  display:flex;
+  gap:25px;
+}
+
+.intro button{
+  padding:14px 35px;
+  font-size:1.1rem;
+  font-weight:bold;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  background:#00ffff;
+  color:#000;
+  box-shadow:0 0 20px #00ffff;
+  transition:transform .3s, box-shadow .3s;
+}
+
+.intro button:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 35px #ff69b4;
+}
+
+/* ===== SECOND POPUP ===== */
+#noPopup{
+  display:none;
+}
+
+/* ===== CONTENT ===== */
+a{color:#00ffff;text-decoration:none}
+a:hover{color:#ff69b4;text-shadow:0 0 10px #ff69b4}
+
+.note{
+  position:absolute;
+  top:15px;
+  right:15px;
+  background:rgba(255,20,147,.1);
+  color:#ff69b4;
+  padding:12px;
+  border:1px dashed #ff69b4;
+  border-radius:10px;
+  box-shadow:0 0 15px #ff69b4;
+}
+
+header{text-align:center;padding:30px 0}
+
+.profile-pic-placeholder{
+  width:220px;
+  height:220px;
+  border:4px dashed #00ffff;
+  margin:0 auto 15px;
+}
+
+h1{text-shadow:0 0 10px #00ffff}
+.nickname{color:#00ffff
+padding: 16px;
+  font-size: 12px;
+}
+
+
+section{
+  margin:40px auto;
+  max-width:800px;
+  padding:25px;
+  background:rgba(255,255,255,.05);
+  border-radius:15px;
+  box-shadow:0 0 20px rgba(0,255,255,.1);
+}
+
+h2{
+  border-bottom:2px solid #00ffff;
+  margin-bottom:15px;
+  padding-bottom:8px;
+  color:#00ffff;
+}
+
+footer{
+  text-align:center;
+  margin-top:40px;
+  color:#aaa;
+}
+
+.role-text {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+#typing {
+  color: #00ffd5;
+  border-right: 3px solid #00ffd5;
+  padding-right: 5px;
+  animation: blink 0.7s infinite;
+}
+
+/* Cursor blink */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .role-text {
+    font-size: 1.6rem;
+  }
+}
+
+
