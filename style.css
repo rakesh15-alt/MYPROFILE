@@ -104,17 +104,46 @@ body{
 a{color:#00ffff;text-decoration:none}
 a:hover{color:#ff69b4;text-shadow:0 0 10px #ff69b4}
 
-.note{
-  position:absolute;
-  top:15px;
-  right:15px;
-  background:rgba(255,20,147,.1);
-  color:#ff69b4;
-  padding:12px;
-  border:1px dashed #ff69b4;
-  border-radius:10px;
-  box-shadow:0 0 15px #ff69b4;
+
+/* ===============================
+   NOTE – DESKTOP
+================================ */
+.note {
+  max-width: 90%;
+  width: fit-content;
+  margin: 20px;
+  padding: 12px 18px;
+
+  background: rgba(255,20,147,.1);
+  color: #ff69b4;
+  border: 1px dashed #ff69b4;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ff69b4;
+
+  text-align: end;
+  word-wrap: break-word;
 }
+
+/* ===============================
+   NOTE – MOBILE (TOP RIGHT)
+================================ */
+@media (max-width: 768px) {
+  .note {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+
+    max-width: 65%;
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 8px 12px;
+
+    margin: 0;
+    z-index: 10000;
+  }
+}
+
+
 
 header{text-align:center;padding:30px 0}
 
@@ -194,28 +223,7 @@ body {
   padding: 0;
 }
 
-/* ===============================
-   NOTE (PINK NEON BOX) – PC
-================================ */
-.note {
-  max-width: 90%;
-  width: fit-content;
-  margin: 0 auto;
-  padding: 12px 18px;
-  text-align: center;
 
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
-}
-
-/* ===============================
-   IMAGES RESPONSIVE
-================================ */
-img {
-  max-width: 100%;
-  height: auto;
-}
 
 /* ===============================
    MOBILE VIEW (TOP-RIGHT NOTE)
@@ -236,3 +244,5 @@ img {
   }
 
 }
+
+
