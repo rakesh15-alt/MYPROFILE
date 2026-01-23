@@ -181,4 +181,58 @@ footer{
   }
 }
 
+/* ===============================
+   GLOBAL SAFETY FIX
+================================ */
+* {
+  box-sizing: border-box;
+}
 
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===============================
+   NOTE (PINK NEON BOX) – PC
+================================ */
+.note {
+  max-width: 90%;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 12px 18px;
+  text-align: center;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* ===============================
+   IMAGES RESPONSIVE
+================================ */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===============================
+   MOBILE VIEW (TOP-RIGHT NOTE)
+================================ */
+@media (max-width: 768px) {
+
+  .note {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+
+    max-width: 70%;
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 8px 12px;
+
+    z-index: 9999;
+  }
+
+}
