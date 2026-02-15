@@ -15,6 +15,17 @@ body{
   overflow-x:hidden;
 }
 
+body {
+  cursor: url("mycursor.png"), auto;                 /* CURSOR */
+}
+a:hover {
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: url("hover-mycursor.png"), pointer;
+}
+
 @keyframes gradientBG{
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
@@ -244,5 +255,6 @@ body {
   }
 
 }
+
 
 
